@@ -1,56 +1,22 @@
 package org.prog;
 
-import org.prog.cars.BMW;
-import org.prog.cars.ICar;
-
 public class Main {
 
     public static void main(String... args) {
-        AnotherClass anotherClass = new AnotherClass();
-        ChildClass childClass = new ChildClass();
+        String[] stringArray = new String[10];
+        stringArray[0] = "a";
+        stringArray[1] = "b";
 
-//        childClass.printString("aaa");
-//        childClass.printString("aaa", "aaa");
-//        childClass.printString("aaa", "aaa", "aaa");
+        System.out.println(stringArray[0]);//1
+        System.out.println(stringArray[1]);//2
+        System.out.println(stringArray[2]);//3
 
-//        Volvo volvo = new Volvo();
-//        Mazda mazda = new Mazda();
-
-//        BMW bmwRed = new BMW();
-//        BMW bmwBlue = new BMW();
-//        bmwRed.color = "red";
-//        changeColor(bmwRed, "yellow");
-//        changeColor(bmwRed, "cyan");
-
-//        bmwBlue.color = "blue";
-//        bmwBlue.color = "green";
-
-//        useCar(bmwRed);
-//        useCar(bmwBlue);
-//        useCar(volvo);
-
-//        System.out.println(bmwRed.color);
-//        System.out.println(bmwBlue.color);
-
-//        int i = 100;
-//        i = increment(100);
-//        increment(100);
-//        i += 100;
-//        System.out.println(i);
+        smth("a", "b", "c", "d");
+        smth("a");
 
     }
 
-    public static void changeColor(BMW bmw, String color) {
-        bmw.color = color;
-    }
-
-    public static int increment(int input) {
-        return input += 100;
-    }
-
-    public static void useCar(ICar iCar) {
-        iCar.drive();
-        iCar.turn();
-        iCar.slow();
+    public static void smth(String... strings) {
+        System.out.println(strings.length);
     }
 }

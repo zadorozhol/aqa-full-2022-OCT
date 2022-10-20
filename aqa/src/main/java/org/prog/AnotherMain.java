@@ -1,68 +1,81 @@
 package org.prog;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+
 public class AnotherMain {
 
     public static void main(String... args) {
-
-//        String s1 = "a";
-//        String s2 = new String("a");
+//        ArrayList<String> aList = new ArrayList<>();
+//        ArrayList<String> bList = new ArrayList<>();
+//        aList.add("1");//0
+//        aList.add("2");//1
+//        aList.add("3");//2
+//        aList.add("4");//3
 //
-//        System.out.println(s1.equals(s2));
-//        System.out.println(s1 == s2);
+//        bList.add("5");//4
+//        bList.add("6");
+//        bList.add("aaaaaa");
+//
+//        System.out.println(aList.size());
+//
+//        aList.addAll(bList);
+//        System.out.println(aList.size());
 
-//        giveMeAString(true);
-//        printStuff("b", "aa");
-//        printStuff("bb", "aa");
-//        printStuff("bbb", "aa");
+//        BMW blueCar = new BMW();
+//        blueCar.color = "blue";
+//        BMW redCar = new BMW();
+//        redCar.color = "red";
+//
+//        List<BMW> bmwListOne = new ArrayList<>();
+//        List<BMW> bmwListTwo = new ArrayList<>();
+//
+//        bmwListOne.add(blueCar);
+//        bmwListTwo.add(redCar);
+//
+//        System.out.println(bmwListOne.get(0).color);
+//        System.out.println(bmwListTwo.get(0).color);
+//
+//        bmwListTwo.get(0).color = "green";
+//
+//        System.out.println(bmwListOne.get(0).color);
+//        System.out.println(bmwListTwo.get(0).color);
+//
+//        bmwListOne.addAll(bmwListTwo);// 2 cars in list One
+//        bmwListOne.get(1).color = "yellow";
+//
+//        System.out.println(bmwListOne.get(0).color);
+//        System.out.println(bmwListOne.get(1).color);
+//        System.out.println(bmwListTwo.get(0).color);
 
-//        for (int i = 0; i < 10; i++) {
-//            System.out.println(i);
-//        }
-//        int i = 0;
-//        do {
-//            System.out.println(i);
-//            i++;
-//        } while (i < 10);
+//        LinkedList<String> linkedList;
+//        ArrayList<String> arrayList;
 
-        switchDemo("a");
-        switchDemo("b");
-        switchDemo("c");
-    }
+        HashMap<String, String> map = new HashMap<>();
+        map.put(null, "valueA");
+        map.put("surName", "valueA");
+        map.put("secondName", "valueA");
+        map.put("firstName", "valueB");
+        System.out.println(map.get("firstName"));
+        map.put("firstName", "valueC");
+        map.put(null, "NullKey");
+        System.out.println(map.get("firstName"));
+        System.out.println(map.get(null));
 
-    public static String giveMeAString(boolean isEmpty) {
-        return aaa(isEmpty);
-    }
-
-    public static String aaa(boolean isEmpty) {
-        if (isEmpty) {
-            return null;
-        } else {
-            return "asdasd";
-        }
-    }
-
-    public static void printStuff(String s1, String s2) {
-        if (s1.length() > s2.length()) {
-            System.out.println(s1 + s2);
-        } else if (s1.length() == s2.length()) {
-            System.out.println(s1);
-            System.out.println(s2);
-        } else {
-            System.out.println(s2 + s1);
-        }
-    }
-
-    public static void switchDemo(String s) {
-        switch (s) {
-            case "a":
-                System.out.println("this is a");
-                break;
-            case "b":
-                System.out.println("this is b");
-                break;
-            default:
-                System.out.println("this is neither a nor b");
-                break;
-        }
+        ArrayList<String> aList = new ArrayList<>();
+        aList.add("a");
+        aList.add("a");
+        aList.add("a");
+        aList.add("a");
+        aList.add("a");
+        HashSet<String> hashSet = new HashSet<>();
+        hashSet.add("a");
+        hashSet.add("a");
+        hashSet.add("a");
+        hashSet.add("a");
+        hashSet.add("a");
+        System.out.println(hashSet.size());
+        System.out.println(aList.size());
     }
 }
