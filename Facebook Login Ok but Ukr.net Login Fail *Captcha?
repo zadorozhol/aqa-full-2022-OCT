@@ -1,0 +1,38 @@
+public class TestOlesia {
+    public static void main(String... args) throws InterruptedException {
+        WebDriverManager.chromedriver().setup();
+
+        //Facebook Login - No Captcha
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.facebook.com/");
+
+        WebElement txtbx_username =
+        driver.findElement(By.xpath("//input[@placeholder= 'Email or phone number']"));
+        txtbx_username.sendKeys("username");
+
+        //Password is set
+        driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("password");
+
+        //Click on Log In button
+        driver.findElement(By.xpath("//button[@name='login']")).click();
+        driver.quit();
+
+        //UKR.NET LOGIN - With CAPTCHA
+
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.ukr.net/");
+
+        WebElement username =
+                driver.findElement(By.xpath("//input[@name='login']"));
+
+                    username.sendKeys("username");
+
+                    //Password is set
+                    driver.findElement(By.xpath("//input[@name='password']")).sendKeys("password");
+
+                    //Click on Log In button
+                    driver.findElement(By.xpath("//div[@class='form__navigation']")).click();
+
+        }
+
+        }
