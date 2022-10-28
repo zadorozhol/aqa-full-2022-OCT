@@ -1,0 +1,21 @@
+public class TestOlesia {
+    public static void main(String... args) {
+    
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        
+        driver.get("https://www.ukr.net/");
+        
+        driver.switchTo().frame("mail widget");
+        WebElement login = driver.findElement(By.id("id-input-login"));
+        login.sendKeys("username");
+
+        driver.findElement(By.xpath("//input[@name='password']")).sendKeys("password");
+        
+        driver.findElement(By.xpath("//button[@class='form__submit']")).click();
+        
+        driver.switchTo().defaultContent();
+        
+        driver.findElement(By.xpath("//*[@class='service__entry service__entry_mail']")).click();
+        
+        driver.quit();
