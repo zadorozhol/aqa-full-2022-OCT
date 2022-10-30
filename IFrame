@@ -1,0 +1,33 @@
+   // IFRAME - Find Element
+    public static void main(String... args) {
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.ukr.net/");
+
+        // using ID or Name of iframe
+        driver.switchTo().frame("mail widget");
+        //using index of iframe
+//        driver.switchTo().frame(0);
+//        //using WebElement as argument
+//        driver.switchTo().frame(driver.findElement(By.xpath(""));
+
+        WebElement login = driver.findElement(By.id("id-input-login"));
+        login.sendKeys("zadorozhnii9876");
+    }
+}
+
+   //Facebook Login - No Captcha
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.facebook.com/");
+
+        WebElement txtbx_username =
+        driver.findElement(By.xpath("//input[@placeholder= 'Email or phone number']"));
+        txtbx_username.sendKeys("username");
+
+        //Password is set
+        driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("password");
+
+        //Click on Log In button
+        driver.findElement(By.xpath("//button[@name='login']")).click();
+        driver.quit();
+        
+        
