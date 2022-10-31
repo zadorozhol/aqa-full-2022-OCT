@@ -87,5 +87,7 @@ public class RozetkaPage {
                     Arguments.of("Samsung", EXPECTED_Samsung, "Samsung")
             );
         }
+         public void loadRozetkaPage () {       driver.get("https://rozetka.com.ua/");
+        driver.manage().window().maximize();
         }
         }
